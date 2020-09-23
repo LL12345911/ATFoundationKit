@@ -25,7 +25,11 @@ Pod::Spec.new do |s|
     #s.source_files = 'FoundationKitLib/**/*.{h,m}'\
     s.source_files = 'FoundationKitLib/*.{h,m}'
    
-     s.subspec 'EventBus' do |ss|
+    s.subspec 'Thread' do |ss|
+    ss.source_files = 'FoundationKitLib/Thread/*.{h,m}'
+    end
+
+    s.subspec 'EventBus' do |ss|
     ss.source_files = 'FoundationKitLib/EventBus/*.{h,m}'
     end
 
