@@ -51,4 +51,8 @@
 #import "ATMacro.h"
 #import "AutoInch.h"
 
+#import "Scheduler.h"
+#import "ThreadExplore.h"
+
+
 #endif /* FoundationMacro_h */

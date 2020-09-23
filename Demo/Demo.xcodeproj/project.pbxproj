@@ -37,6 +37,8 @@
 		412CDA7C251B2A36000411B6 /* NSObject+Json.m in Sources */ = {isa = PBXBuildFile; fileRef = 412CDA4A251B2A35000411B6 /* NSObject+Json.m */; };
 		412CDA7D251B2A36000411B6 /* NSObject+ATAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 412CDA4B251B2A35000411B6 /* NSObject+ATAlert.m */; };
 		412CDA7E251B2A36000411B6 /* NSDate+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 412CDA52251B2A35000411B6 /* NSDate+Util.m */; };
+		412CDB1D251B32F6000411B6 /* ThreadExplore.m in Sources */ = {isa = PBXBuildFile; fileRef = 412CDB1A251B32F6000411B6 /* ThreadExplore.m */; };
+		412CDB1E251B32F6000411B6 /* Scheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 412CDB1B251B32F6000411B6 /* Scheduler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +121,10 @@
 		412CDA52251B2A35000411B6 /* NSDate+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Util.m"; sourceTree = "<group>"; };
 		412CDA53251B2A35000411B6 /* NSDate+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Util.h"; sourceTree = "<group>"; };
 		412CDA54251B2A35000411B6 /* AutoInch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoInch.h; sourceTree = "<group>"; };
+		412CDB19251B32F6000411B6 /* Scheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scheduler.h; sourceTree = "<group>"; };
+		412CDB1A251B32F6000411B6 /* ThreadExplore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadExplore.m; sourceTree = "<group>"; };
+		412CDB1B251B32F6000411B6 /* Scheduler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scheduler.m; sourceTree = "<group>"; };
+		412CDB1C251B32F6000411B6 /* ThreadExplore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadExplore.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +212,7 @@
 		412CDA07251B2A35000411B6 /* ATFoundationKit */ = {
 			isa = PBXGroup;
 			children = (
+				412CDB18251B32F6000411B6 /* Thread */,
 				412CDA50251B2A35000411B6 /* ATMacro.h */,
 				412CDA2F251B2A35000411B6 /* ATMacro.m */,
 				412CDA54251B2A35000411B6 /* AutoInch.h */,
@@ -325,6 +332,17 @@
 				412CDA53251B2A35000411B6 /* NSDate+Util.h */,
 			);
 			path = NSDate;
+			sourceTree = "<group>";
+		};
+		412CDB18251B32F6000411B6 /* Thread */ = {
+			isa = PBXGroup;
+			children = (
+				412CDB19251B32F6000411B6 /* Scheduler.h */,
+				412CDB1B251B32F6000411B6 /* Scheduler.m */,
+				412CDB1C251B32F6000411B6 /* ThreadExplore.h */,
+				412CDB1A251B32F6000411B6 /* ThreadExplore.m */,
+			);
+			path = Thread;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,6 +485,7 @@
 				412CDA6E251B2A36000411B6 /* MarsEventBus.m in Sources */,
 				412CDA74251B2A36000411B6 /* NSString+Regex.m in Sources */,
 				412CDA6B251B2A36000411B6 /* NSDictionary+ATKit.m in Sources */,
+				412CDB1E251B32F6000411B6 /* Scheduler.m in Sources */,
 				412CD9D4251B282F000411B6 /* AppDelegate.m in Sources */,
 				412CD9E5251B2834000411B6 /* main.m in Sources */,
 				412CDA7C251B2A36000411B6 /* NSObject+Json.m in Sources */,
@@ -475,6 +494,7 @@
 				412CDA78251B2A36000411B6 /* NSArray+FunctionOperate.m in Sources */,
 				412CDA75251B2A36000411B6 /* NSString+Number.m in Sources */,
 				412CD9D7251B282F000411B6 /* SceneDelegate.m in Sources */,
+				412CDB1D251B32F6000411B6 /* ThreadExplore.m in Sources */,
 				412CDA7A251B2A36000411B6 /* NSObject+ATKVOBlocks.m in Sources */,
 				412CDA76251B2A36000411B6 /* NSMutableArray+ATKit.m in Sources */,
 				412CDA70251B2A36000411B6 /* ATMacro.m in Sources */,

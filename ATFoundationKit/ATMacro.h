@@ -8,68 +8,68 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import <sys/time.h>
-#import <pthread.h>
-
-/**
- Returns a dispatch_time delay from now.
- */
-static inline dispatch_time_t dispatch_time_delay(NSTimeInterval second) {
-    return dispatch_time(DISPATCH_TIME_NOW, (int64_t)(second * NSEC_PER_SEC));
-}
-
-/**
- Returns a dispatch_wall_time delay from now.
- */
-static inline dispatch_time_t dispatch_walltime_delay(NSTimeInterval second) {
-    return dispatch_walltime(DISPATCH_TIME_NOW, (int64_t)(second * NSEC_PER_SEC));
-}
-
-/**
- Returns a dispatch_wall_time from NSDate.
- */
-static inline dispatch_time_t dispatch_walltime_date(NSDate *date) {
-    NSTimeInterval interval;
-    double second, subsecond;
-    struct timespec time;
-    dispatch_time_t milestone;
-    
-    interval = [date timeIntervalSince1970];
-    subsecond = modf(interval, &second);
-    time.tv_sec = second;
-    time.tv_nsec = subsecond * NSEC_PER_SEC;
-    milestone = dispatch_walltime(&time, 0);
-    return milestone;
-}
-
-/**
- Whether in main queue/thread.
- */
-static inline bool dispatch_is_main_queue() {
-    return pthread_main_np() != 0;
-}
-
-/**
- Submits a block for asynchronous execution on a main queue and returns immediately.
- */
-static inline void dispatch_async_on_main_queue(void (^block)(void)) {
-    if (pthread_main_np()) {
-        block();
-    } else {
-        dispatch_async(dispatch_get_main_queue(), block);
-    }
-}
-
-/**
- Submits a block for execution on a main queue and waits until the block completes.
- */
-static inline void dispatch_sync_on_main_queue(void (^block)(void)) {
-    if (pthread_main_np()) {
-        block();
-    } else {
-        dispatch_sync(dispatch_get_main_queue(), block);
-    }
-}
+//#import <sys/time.h>
+//#import <pthread.h>
+//
+///**
+// Returns a dispatch_time delay from now.
+// */
+//static inline dispatch_time_t dispatch_time_delay(NSTimeInterval second) {
+//    return dispatch_time(DISPATCH_TIME_NOW, (int64_t)(second * NSEC_PER_SEC));
+//}
+//
+///**
+// Returns a dispatch_wall_time delay from now.
+// */
+//static inline dispatch_time_t dispatch_walltime_delay(NSTimeInterval second) {
+//    return dispatch_walltime(DISPATCH_TIME_NOW, (int64_t)(second * NSEC_PER_SEC));
+//}
+//
+///**
+// Returns a dispatch_wall_time from NSDate.
+// */
+//static inline dispatch_time_t dispatch_walltime_date(NSDate *date) {
+//    NSTimeInterval interval;
+//    double second, subsecond;
+//    struct timespec time;
+//    dispatch_time_t milestone;
+//
+//    interval = [date timeIntervalSince1970];
+//    subsecond = modf(interval, &second);
+//    time.tv_sec = second;
+//    time.tv_nsec = subsecond * NSEC_PER_SEC;
+//    milestone = dispatch_walltime(&time, 0);
+//    return milestone;
+//}
+//
+///**
+// Whether in main queue/thread.
+// */
+//static inline bool dispatch_is_main_queue() {
+//    return pthread_main_np() != 0;
+//}
+//
+///**
+// Submits a block for asynchronous execution on a main queue and returns immediately.
+// */
+//static inline void dispatch_async_on_main_queue(void (^block)(void)) {
+//    if (pthread_main_np()) {
+//        block();
+//    } else {
+//        dispatch_async(dispatch_get_main_queue(), block);
+//    }
+//}
+//
+///**
+// Submits a block for execution on a main queue and waits until the block completes.
+// */
+//static inline void dispatch_sync_on_main_queue(void (^block)(void)) {
+//    if (pthread_main_np()) {
+//        block();
+//    } else {
+//        dispatch_sync(dispatch_get_main_queue(), block);
+//    }
+//}
 
 /// 返回 图片 UIViewContentModeScaleAspectFit 后的size
 /// @param Width 图片的真实宽度
