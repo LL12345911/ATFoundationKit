@@ -155,7 +155,7 @@
 		412CD9C6251B282F000411B6 = {
 			isa = PBXGroup;
 			children = (
-				412CDA07251B2A35000411B6 /* ATFoundationKit */,
+				412CDA07251B2A35000411B6 /* FoundationKitLib */,
 				412CD9D1251B282F000411B6 /* Demo */,
 				412CD9ED251B2834000411B6 /* DemoTests */,
 				412CD9F8251B2834000411B6 /* DemoUITests */,
@@ -209,7 +209,7 @@
 			path = DemoUITests;
 			sourceTree = "<group>";
 		};
-		412CDA07251B2A35000411B6 /* ATFoundationKit */ = {
+		412CDA07251B2A35000411B6 /* FoundationKitLib */ = {
 			isa = PBXGroup;
 			children = (
 				412CDB18251B32F6000411B6 /* Thread */,
@@ -228,8 +228,8 @@
 				412CDA30251B2A35000411B6 /* Runtime */,
 				412CDA44251B2A35000411B6 /* XTimer */,
 			);
-			name = ATFoundationKit;
-			path = ../ATFoundationKit;
+			name = FoundationKitLib;
+			path = ../FoundationKitLib;
 			sourceTree = "<group>";
 		};
 		412CDA20251B2A35000411B6 /* NSDictionary */ = {
